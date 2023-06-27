@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3a444e;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    padding: 20px 20px;
+    height: 450px;
+    width: 450px;   
+    position: relative; 
+}
+
+
+.grafik {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+}
+
+
+
+/* 
+    Eger display: flex olursa html icerisine yazmıs oldugum itemlar gosterilir
+    Burada none dedigim icin gizlenmis oldu eger js icerisinde flex yaparsam çöp adam gosteerilmis 
+    svg, line kodları ekranda gozukur
+*/
+.item {
+    display: none; 
+}
+
+
+
+
+#wrong-letters {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+
+
+#popup-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;  /*display: flex olursa direkt ekran gosterir display: none; olursa ekran çıkarır */
+    align-items: center;  /* none oldugu icin ilk basta gozukmuyor js ile style flex yapılırsa gozukur*/
+    justify-content: center;
+}
+
+
+.popup {
+    background-color: green;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+
+.letter {
+    border-bottom: 3px solid rgb(255, 228, 178);
+    font-size: 30px;
+    margin: 0px 3px;
+    height: 40px;
+    width: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
